@@ -27,7 +27,7 @@ const processImage = async (
   // Normal images at 60% quality
   await image
     .webp({
-      quality: 60,
+      quality: 80,
     })
     .toFile(targetPathNormal.replace(path.extname(targetPathNormal), ".webp"));
 
@@ -35,7 +35,7 @@ const processImage = async (
   await image
     .resize(200) // Modify this to the dimension you want
     .webp({
-      quality: 30, // Modify this to the quality you want
+      quality: 80, // Modify this to the quality you want
     })
     .toFile(
       targetPathOptimized.replace(path.extname(targetPathOptimized), ".webp")
